@@ -1,0 +1,8 @@
+Flask
+requests
+textblob
+yfinance
+pandas
+numpy
+matplotlib
+scikit-learn

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for r in results %}
+
+<div class="glass-card result-card">
+
+    <div class="result-header">
+        <h1>{{ r.stock }}</h1>
+        <h2>{{ r.decision }}</h2>
+    </div>
+
+    <div class="result-grid">
+        <div class="metric">
+            <h3>Confidence</h3>
+            <p>{{ r.confidence }}%</p>
+        </div>
+
+        <div class="metric">
+            <h3>Risk</h3>
+            <p>{{ r.risk }}</p>
+        </div>
+
+        <div class="metric">
+            <h3>Accuracy</h3>
+            <p>{{ r.accuracy }}%</p>
+        </div>
+
+        <div class="metric">
+            <h3>Sentiment</h3>
+            <p>{{ r.sentiment }}</p>
+        </div>
+    </div>
+
+    <div class="chart-section">
+        <h2>📈 Price Trend</h2>
+        <img src="{{ url_for('static', filename='chart.png') }}" width="90%">
+    </div>
+
+    <!-- HEADLINES SECTION -->
+    <div class="headline-section">
+        <h2>📰 Latest Headlines</h2>
+
+        {% if r.headlines %}
+            <ul class="headline-list">
+                {% for h in r.headlines %}
+                    <li>{{ h }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No recent news found.</p>
+        {% endif %}
+    </div>
+
+</div>
+
+{% endfor %}
+
+<div class="action-buttons">
+    <a href="/input" class="btn-primary">Analyze Another</a>
+    <a href="/" class="btn-secondary">Back to Welcome</a>
+</div>
+
+{% endblock %}

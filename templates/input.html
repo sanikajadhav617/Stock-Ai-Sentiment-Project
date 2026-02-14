@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="glass-card center-card">
+    <h1>Analyze Stocks</h1>
+    <p>Enter one or multiple stock symbols (comma separated)</p>
+
+    <form action="/analyze" method="POST">
+        <input type="text" name="stock" placeholder="Example: TSLA, AAPL, RELIANCE.NS" required>
+        <br><br>
+        <button type="submit" class="btn-primary">Analyze Now</button>
+    </form>
+
+    <br>
+    <a href="/" class="btn-secondary">⬅ Back to Welcome</a>
+</div>
+
+{% endblock %}

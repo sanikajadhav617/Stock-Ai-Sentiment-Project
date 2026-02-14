@@ -1,0 +1,137 @@
+/* -------- GLOBAL -------- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+}
+
+/* -------- NAVBAR -------- */
+.navbar {
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    text-align: center;
+    font-size: 40px;
+    backdrop-filter: blur(10px);
+}
+
+/* -------- WELCOME PAGE -------- */
+.welcome-bg {
+    background: url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* -------- BUTTONS -------- */
+.btn-primary {
+    background: #00ffcc;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #00cc99;
+}
+
+.btn-secondary {
+    background: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* -------- MAIN -------- */
+.main-container {
+    padding: 40px;
+    text-align: center;
+}
+
+/* -------- GLASS CARD -------- */
+.glass-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 85%;
+    box-shadow: 0 0 20px rgba(0,255,204,0.2);
+}
+
+.center-card {
+    max-width: 600px;
+}
+
+.result-card {
+    max-width: 1000px;
+}
+
+/* -------- INPUT -------- */
+input {
+    padding: 12px;
+    width: 300px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* -------- GRID -------- */
+.result-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.metric {
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.metric h3 {
+    color: #00ffcc;
+}
+
+/* -------- CHART -------- */
+.chart-section {
+    margin-top: 30px;
+}
+
+/* -------- ACTION BUTTONS -------- */
+.action-buttons {
+    margin-top: 40px;
+}
+.headline-section {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.headline-section h2 {
+    color: #00ffcc;
+    margin-bottom: 15px;
+}
+
+.headline-list {
+    list-style: none;
+    padding: 0;
+}
+
+.headline-list li {
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.headline-list li:hover {
+    background: rgba(0,255,204,0.2);
+}
+
+

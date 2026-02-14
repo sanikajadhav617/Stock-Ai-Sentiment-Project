@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="overlay">
+    <h1>{{ stock }} Analysis</h1>
+
+    <h2>Sentiment Score: {{ sentiment }}</h2>
+    <h1>{{ decision }}</h1>
+
+    <h2>Model Performance</h2>
+    <p>Accuracy: {{ accuracy }}%</p>
+    <p>Precision: {{ precision }}%</p>
+    <p>Recall: {{ recall }}%</p>
+    <p>F1 Score: {{ f1 }}%</p>
+
+    <h2>Stock Chart</h2>
+    <img src="{{ url_for('static', filename='chart.png') }}" width="70%">
+
+    <h2>Confusion Matrix</h2>
+    <img src="{{ url_for('static', filename='confusion.png') }}" width="50%">
+
+    <br><br>
+    <a href="/">⬅ Back</a>
+</div>
+
+</body>
+</html>
